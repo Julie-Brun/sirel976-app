@@ -1,0 +1,17 @@
+<div class="container">
+    <app-movies-search (sendTerm)="search($event)"></app-movies-search>
+    <div class="row">
+        <div *ngFor="let movie of moviesList" class="col m4 s6">
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img [src]="movie.image" />
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>{{ movie.name }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
